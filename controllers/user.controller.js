@@ -13,3 +13,10 @@ exports.create = async(req,res)=>{
         message:"created"
     })
 }
+
+exports.getUser = async(req, res)=>{
+    return res.json({
+        data:await User.find(),
+        message:"data"
+    })
+}

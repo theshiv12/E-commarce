@@ -12,8 +12,9 @@ app.listen(3000,()=>{
 })
 // let user=
 app.use("/",require("./routers/user.route"))
-const url = process.env.URL
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }).then((data)=>{
+const url = process.env.MONGO_URL
+console.log(url);
+mongoose.connect("mongodb://mongo-db:27017/E-commerce", { useNewUrlParser: true, useUnifiedTopology: true }).then((data)=>{
     console.log("mongo connected")
 }).catch((err)=>{
     console.log(err);

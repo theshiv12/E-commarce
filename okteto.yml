@@ -20,7 +20,6 @@ deploy:
     file: docker-compose.yaml
     services:
       - api
-    
 
 # The dependencies section defines other git repositories to be deployed as part of your development environment
 # More info: https://www.okteto.com/docs/reference/manifest/#dependencies
